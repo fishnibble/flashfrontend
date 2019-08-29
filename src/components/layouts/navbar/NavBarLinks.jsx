@@ -2,14 +2,15 @@ import React from "react";
 import styled from "styled-components";
 
 const NavBarLinks = () => {
+    
   const Wrapper = styled.nav`
-    background: #7f7b82;
-    font-family: "Roboto";
+    background: #9DD9D2;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 50px;
+    height: 80px;
   `;
+  
 
   const ItemList = styled.ul`
     display: flex;
@@ -17,34 +18,43 @@ const NavBarLinks = () => {
 
   const Item = styled.li`
     display: flex;
-    padding: 20px;
+    padding: 5px 20px;
+    :active,
+    :hover {
+        border-bottom: 2px solid white;
+    }
   `;
 
   const Link = styled.a`
     font-weight: bold;
-    color: #e5d0cc;
+    font-size: 20px;
+    color: black;
     display: inline-block;
+    text-decoration: none;
+
   `;
 
   const Logo = styled.a`
     padding: 0 20px;
     font-weight: bold;
-    color: #e5d0cc;
+    font-size: 25px;
+    color: black;
     display: inline-block;
-  `;
+    text-decoration: none;  
+    `;
 
   return (
     <Wrapper>
-      <Logo>Test</Logo>
+      <Logo href="#">Flash App</Logo>
       <ItemList>
         <Item>
-          <Link>Login</Link>
+          <Link href="#">Login</Link>
         </Item>
         <Item>
-          <Link>Sign up</Link>
+          <Link href="#">Sign up</Link>
         </Item>
         <Item>
-          <Link>Pricing</Link>
+          <Link href="#">Pricing</Link>
         </Item>
       </ItemList>
     </Wrapper>
